@@ -15,7 +15,7 @@ function App() {
       <Flow path="flow" />
       <Signup path="signup" />
       <Animation path="animation" />
-      <Sorry path="sorry" />
+      <Sorry path="sorry/:reason" />
       <Eligible path="eligible" />
     </Router>
   );

@@ -94,11 +94,14 @@ export const Signup = () => {
         if (radioYes === 'yes' && formik.values.employer === 'oshi') {
             navigate(`/eligible`)
         } else {
-            navigate(`/sorry`)
+            if (formik.values.employer !== 'oshi') {
+                navigate(`/sorry/${formik.values.employer}`)
+            }
+            if (radioNo === 'no') {
+                console.log('here', radioNo)
+                navigate(`/sorry/diagnosis`)
+            }
         }
-        console.log('submit is clicked')
-        console.log('status', status)
-        console.log(formik.values.name)
     }
 
 

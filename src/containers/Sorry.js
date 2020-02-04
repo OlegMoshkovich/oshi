@@ -25,11 +25,23 @@ height: 100px;
 
 
 
-export const Sorry = () => {
+export const Sorry = (props) => {
     return (
         <Container>
             <Nav />
             <Title> Sorry</Title>
+            <LocalContainer>
+                {
+                    props.reason !== "diagnosis" ?
+                        <div>
+                            We are sorry {props.reason} is currently not enrolled in our program...
+                         </div> :
+                        <div>
+                            need to be diagnosed
+                         </div>
+                }
+
+            </LocalContainer>
         </Container >
     )
 }

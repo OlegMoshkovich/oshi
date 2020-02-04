@@ -32,10 +32,8 @@ export const Eligible = () => {
             <Title> Eligible</Title>
             <LocalContainer>
                 <div>
-                    We think you are eligible...can you please tell us more about your symptoms
-            </div>
-
-
+                    We think you are eligible...can you please tell us more about your symptoms?
+                 </div>
             </LocalContainer>
         </Container >
     )
