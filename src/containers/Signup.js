@@ -53,7 +53,7 @@ margin:0px 0px 5px 0px ;
 `
 const Answer = styled.div`
 font-size:20px;
-margin:30px 0px 0px 0px ;
+margin:0px 0px 0px 0px ;
 `
 
 export const Signup = () => {
@@ -80,12 +80,14 @@ export const Signup = () => {
             setStatus('diagnosed')
             console.log('radio yes from the handle submit', status)
         }
+
         if (radioNo === 'no') {
             setStatus('')
             console.log('radio yes from the handle submit', status)
         }
+
         if (formik.values.employer === 'oshi') {
-            alert('employer is oshi - validated')
+            // alert('employer is oshi - validated')
         }
 
         console.log('submit is clicked')
@@ -187,9 +189,16 @@ export const Signup = () => {
 
                 {/* diagnosis */}
                 <LocalContainer borderColor={'white'}>
-                    {/* <Answer>diagnosed</Answer> */}
-                    {radioYes === 'yes' ? <Answer>diagnosed</Answer> : <Answer>{' '}</Answer>}
+                    <LocalContainer width={'30px'} borderColor={'white'}>
+                        {/* <Answer>diagnosed</Answer> */}
+                        {radioYes === 'yes' ? <Answer>diagnosed</Answer> : <Answer>{' '}</Answer>}
+                    </LocalContainer>
+                    <LocalContainer width={'30px'} borderColor={'white'}>
+                        {/* <Answer>diagnosed</Answer> */}
+                        {formik.values.employer === 'oshi' ? <Answer>employer matched</Answer> : <Answer>{' '}</Answer>}
+                    </LocalContainer>
                 </LocalContainer>
+
             </LocalContainer>
 
 

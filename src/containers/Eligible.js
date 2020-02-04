@@ -25,11 +25,11 @@ height: 100px;
 
 
 
-export const Sorry = () => {
+export const Eligible = () => {
     return (
         <Container>
             <Nav />
-            <Title> Sorry</Title>
+            <Title> Eligible</Title>
             <LocalContainer>
                 <div>
                     Welcome to Oshi Health
