@@ -32,14 +32,10 @@ export const Eligible = () => {
             <Title> Eligible</Title>
             <LocalContainer>
                 <div>
-                    Welcome to Oshi Health
+                    We think you are eligible...can you please tell us more about your symptoms
             </div>
-                {/* <button >sign up</button> */}
-                <button>
-                    <Link style={{ textDecoration: 'none', color: 'black' }} to="/signup">
-                        Signup
-                    </Link>
-                </button>
+
+
             </LocalContainer>
         </Container >
     )

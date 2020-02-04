@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components'
-import { Link } from "@reach/router"
+import { Link, navigate } from "@reach/router"
 import { Nav } from '../components/Nav'
 import { Title } from '../components/PageTitle'
 import { useFormik } from 'formik';
@@ -90,6 +90,12 @@ export const Signup = () => {
             // alert('employer is oshi - validated')
         }
 
+
+        if (radioYes === 'yes' && formik.values.employer === 'oshi') {
+            navigate(`/eligible`)
+        } else {
+            navigate(`/sorry`)
+        }
         console.log('submit is clicked')
         console.log('status', status)
         console.log(formik.values.name)
@@ -125,16 +131,6 @@ export const Signup = () => {
                 <LocalContainer height={'120px'} borderColor={'white'}>
                     <Form onSubmit={formik.handleSubmit}>
                         <Unit>
-                            <Label htmlFor="name">Email</Label>
-                            <Input
-                                id="email"
-                                name="email"
-                                type="email"
-                                onChange={formik.handleChange}
-                                value={formik.values.email}
-                            />
-                        </Unit>
-                        <Unit>
                             <Label htmlFor="name">Name</Label>
                             <Input
                                 id="name"
@@ -142,6 +138,16 @@ export const Signup = () => {
                                 type="name"
                                 onChange={formik.handleChange}
                                 value={formik.values.name}
+                            />
+                        </Unit>
+                        <Unit>
+                            <Label htmlFor="name">Email</Label>
+                            <Input
+                                id="email"
+                                name="email"
+                                type="email"
+                                onChange={formik.handleChange}
+                                value={formik.values.email}
                             />
                         </Unit>
                         <Unit>

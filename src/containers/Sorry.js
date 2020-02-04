@@ -30,17 +30,6 @@ export const Sorry = () => {
         <Container>
             <Nav />
             <Title> Sorry</Title>
-            <LocalContainer>
-                <div>
-                    Welcome to Oshi Health
-            </div>
-                {/* <button >sign up</button> */}
-                <button>
-                    <Link style={{ textDecoration: 'none', color: 'black' }} to="/signup">
-                        Signup
-                    </Link>
-                </button>
-            </LocalContainer>
         </Container >
     )
 }
